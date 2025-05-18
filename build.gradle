@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.herli'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'io.rest-assured:rest-assured:5.4.0'
+    testImplementation 'io.cucumber:cucumber-java:7.14.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.14.0'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+test{
+useJUnit()
+jvmArgs += [
+    '--add-opens=java.base/java.lang=ALL-UNNAMED',
+    '--add-opens=java.base/java.lang.reflect=ALL-UNNAMED'
+]
+}
