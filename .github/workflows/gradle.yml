@@ -24,4 +24,4 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Run API tests
-        run: ./gradlew clean test --tests "*ApiTest*"
+        run: ./gradlew clean test
